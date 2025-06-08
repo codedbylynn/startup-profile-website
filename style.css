@@ -219,3 +219,154 @@ ul
   line-height: 1.8;
   margin-bottom: 20px;
 }
+.key-features
+{
+  background-color: #F8F8F8;
+  padding: 80px 0;
+  text-align: center;
+  font-family: 'Inter',sans-serif;
+}
+.key-features h2
+{
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 50px;
+  font-style: 700;
+}
+.features-carousel
+{
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom:20px;
+  gap: 30px;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 -20px;
+}
+.features-carousel::-webkit-scrollbar-track
+{
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+.features-carousel::-webkit-scrollbar-thumb
+{
+  background: #6bbf59;
+  border-radius: 10px;
+}
+.features-carousel::-webkit-scrollbar-thumb:hover
+{
+  background: #5aa648;
+}
+.feature-card
+{
+  flex: 0 0 320px;
+  scroll-snap-align:start;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+}
+.card-icon
+{
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-icon img
+{
+  max-width:100%;
+  height:auto;
+  display: block; 
+}
+.features-card h3
+{
+  font-size: 1.6em;
+  color: #333;
+  margin-left: 15px;
+  font-weight: 600;
+  text-transform:capitalize;
+}
+.feature-card p
+{
+  font-size: 1em;
+  color:#555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+.btn-secondary
+{
+  background-color: #6bbf59;
+  color:#fff;
+  border:none;
+  transition:background-colloor 0.3 ease;
+}
+.btn-secondary:hover
+{
+  background-color: #5aa648;
+}
+.carousel-nav
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.nav-dot
+{
+  width:10px;
+  height:10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin:0 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.nav-dot.active
+{
+  background-color: #6bbf59;
+}
+@media screen and (max-width: 768px) {
+    .key-features h2 {
+        font-size: 2em; /* Smaller heading on mobile */
+        margin-bottom: 30px;
+    }
+
+    .features-carousel {
+        justify-content: flex-start; /* Keep to start for scrolling */
+        padding-left: 15px; /* Adjust padding for mobile */
+        padding-right: 15px;
+        margin: 0 -15px; /* Counteract padding */
+    }
+
+    .feature-card {
+        flex: 0 0 85%; /* Cards take up 85% of screen width on mobile, showing part of next card */
+        max-width: 300px; /* Optional: limit max width even on mobile for consistency */
+        padding: 20px;
+        min-height: 350px; /* Adjust height for mobile if needed */
+    }
+
+    .card-icon {
+        width: 60px; /* Smaller icon on mobile */
+        height: 60px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4em; /* Smaller heading inside card */
+    }
+
+    .feature-card p {
+        font-size: 0.95em; /* Slightly smaller text */
+    }
+}
