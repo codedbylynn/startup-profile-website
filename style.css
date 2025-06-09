@@ -53,15 +53,15 @@ ul
 .main-header
 {
   background-color: #0A361A;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  
+  padding: 0;
 }
 .navbar
 {
   display: flex;
   justify-content: space-between;
   align-items:center;
+  padding: 15px 20px;
+  max-width: 1200px;
 }
 .logo 
 {
@@ -88,6 +88,9 @@ ul
 {
   display: flex;
   gap: 30px;
+  padding: 0;
+  list-style: none;
+  margin: 0;
 }
 .main-nav .nav-links li a
 {
@@ -103,11 +106,85 @@ ul
 .menu-toggle
 {
   display: none;
-  background: none;
+  background: transparent;
   border: none;
   font-size: 2em;
   cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width:30px;
+  height: 21px;
+  position: relative;
+  z-index:1001;
   color:#fff;
+}
+.menu-toggle .bar{
+  width:100%;
+  height:3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 1000;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .main-nav .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .main-nav .nav-links li a {
+        padding: 10px 0;
+        display: block;
+        font-size: 1.1em;
+        color: #0A361A;
+    }
+
+    .main-nav .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .container.navbar {
+        padding: 10px 15px;
+    }
+    .logo h1 {
+        font-size: 1.8em;
+    }
 }
 .hero-section
 {
