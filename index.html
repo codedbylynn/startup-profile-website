@@ -154,24 +154,26 @@
    <section  id="ai-assistant" class="chatbot-section">
     <div class="container">
       <h2>Get Answers with Our AI Assistant</h2>
+      <p class="chatbot-instructions">Ask our AI about our story, services, or how you can get involved</p>
       <div class="chatbot-interface">
-        <div class="chat-messages">
+        <div class="chat-messages" id="chat-messages">
           <div class="message-incoming">
-            <P>Hello! I'm AgroBot, your AI farming assistant. How can I help you today regarding farming practices in your place?</P>
-          </div>
-          <div class="message-outgoing">
-            <p>What are the best fertilizers for coffee growing in Kiambu right now?</p>
-          </div>
-          <div class="message-incoming">
-            <p>For coffee in Kiambu, fertilizers high in nitrogen and phosphorus are recommended during the early growth stages. Consider brands like [mention locally available brand] or consult your local agricultural supply store for specific recommendations and current availability.</p>
+            <p>Hello! I'm AgroBot, your AI farming assistant.How can i help you today regarding farming practices in your place/</p>
           </div>
         </div>
-        <div class="chat-input-area">
-          <input type="text" placeholder="Ask your question..." class="chat-input">
-          <button class="send-button">
-            <img src="send (1).png" class="send-icon-image">
-          </button>
-        </div>
+       <div class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Ask your question..." class="chat-input">
+        <button id="send-button" class="send-button">
+          <img src="send (1).png" class="Send-icon-image">
+        </button>
+       </div>
+       <div class="sample-questions-coontainer">
+        <button class="sample-q-btn" data-question="Who founded AgroConnect?">Who founded AgroConnect?</button>
+         <button class="sample-q-btn" data-question="What problems does AgroConnect solve?">What problems does AgroConnect solve?</button>
+          <button class="sample-q-btn" data-question="What services or products does AgroConnect offer?">What services or products does AgroConnect offer?</button>
+           <button class="sample-q-btn" data-question="How can someone support or contact the AgroConnect team?">How can someone support or contact the AgroConnect team?</button>
+            <button class="sample-q-btn" data-question="What's AgroConnect's vision or long-term goal?">What's AgroConnect's vision or long-term goal?</button>
+       </div>
       </div>
     </div>
    </section>
@@ -288,5 +290,6 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="https://js.puter.com/v2/"></script>
 </body>
 </html>
