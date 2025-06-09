@@ -1381,3 +1381,45 @@ footer
         padding: 3px;
     }
 }
+.visitor-counter-section
+{
+  background-color: #F8F8F8;
+  padding: 30px 0;
+  text-align: center;
+  color:#406749;
+  font-size: 1.1em;
+  border-top: 1px;
+  margin-top: 50px;
+}
+.visitor-counter-section p{
+  margin: 0;
+  font-weight: 500;
+}
+#visitor-count
+{
+ font-size:1.4em;
+ font-weight: 700;
+ color:#6bbf59;
+ margin-left: 8px;
+ display: inline-block;
+ min-width: 25px;
+}
+@media screen and (max-width: 768px) {
+    .visitor-counter-section {
+        padding: 25px 0;
+        font-size: 1em;
+        margin-top: 40px;
+    }
+    #visitor-count {
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .visitor-counter-section {
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    #visitor-count {
+        font-size: 1.1em;
+    }
+}
