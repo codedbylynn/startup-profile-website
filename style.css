@@ -594,3 +594,106 @@ blockquote{
         padding: 60px 0;
     }
 }
+.team-section
+{
+  background-color: #E8F5E9;
+  padding: 80px 0;
+  text-align: center;
+}
+.team-section h2
+{
+  font-size: 2.5em;
+  color:#0A361A;
+  margin-left: 50px;
+  font-weight: 700;
+}
+.team-container
+{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap:30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:0 20px;
+}
+.team-member-card
+{
+  background-color:#FFF ;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.team-member-card:hover{
+  transform:translateY(-5px)
+}
+.team-profile-pic
+{
+  width:150px;
+  height:150px;
+  border-radius: 15%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border:1px solid #6bbf59;
+}
+.team-member-card h3
+{
+  font-size: 1.5em;
+  color:#406749;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.team-title
+{
+  font-weight: 1em;
+  color: #777;
+  line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+    .team-section h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .team-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center them when stacked */
+        gap: 25px; /* Adjust gap for vertical stacking */
+        padding: 0 15px; /* Adjust padding */
+    }
+
+    .team-member-card {
+        min-width: unset; /* Remove min-width to allow more flexibility */
+        width: 100%; /* Cards take full width of container */
+        max-width: 300px; /* But don't grow too wide on larger mobile screens */
+        padding: 25px;
+    }
+
+    .team-profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .team-member-card h3 {
+        font-size: 1.3em;
+    }
+
+    .team-title {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-section {
+        padding: 60px 0;
+    }
+}
