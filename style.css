@@ -855,3 +855,136 @@ blockquote{
         padding: 60px 0;
     }
 }
+/* Contact Form Section Styles */
+.contact-section {
+    background-color: #E8F5E9; /* Light green background, similar to other sections */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #0A361A; /* Dark green heading */
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.contact-form-container {
+    background-color: #E6E6E6; /* Grayish background for the form box */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    padding: 40px; /* Inner padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%; /* Make the form take full width of its container */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form groups */
+}
+
+.form-group {
+    text-align: left; /* Align labels and inputs to the left */
+    width: 100%;
+}
+
+.form-group label {
+    display: block; /* Make labels take their own line */
+    font-size: 0.9em;
+    color: #406749; /* Darker green for labels */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: 600;
+    text-transform: uppercase; /* Uppercase labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Inputs take full width of their group */
+    padding: 12px 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded input fields */
+    font-size: 1em;
+    font-family: 'Inter', sans-serif; /* Match overall font */
+    color: #333;
+    background-color: #fff; /* White background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #6bbf59; /* Green border on focus */
+    box-shadow: 0 0 0 3px rgba(107, 191, 89, 0.2); /* Soft green glow on focus */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for message area */
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: #406749; /* Dark green for submit button */
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px; /* Slightly rounded button corners */
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Uppercase text */
+    margin-top: 10px; /* Space above the button */
+    align-self: center; /* Center the button within the form */
+}
+
+.submit-btn:hover {
+    background-color: #335338; /* Darker green on hover */
+}
+
+/* Responsive Adjustments for Contact Form */
+@media screen and (max-width: 768px) {
+    .contact-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .contact-form-container {
+        max-width: 90%; /* Allow it to take more width on smaller screens */
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .contact-form {
+        gap: 15px; /* Adjust spacing */
+    }
+
+    .form-group label {
+        font-size: 0.85em;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .submit-btn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+}
