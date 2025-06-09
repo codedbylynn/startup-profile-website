@@ -60,3 +60,34 @@ window.addEventListener('load',() => {
       }
     })
   })
+  const farmersBtn = document.getElementById('farmers-btn');
+  const partnersBtn = document.getElementById('partners-btn');
+
+  const farmersContent = document.getElementById('farmers-content');
+  const partnersContent = document.getElementById('partners-content');
+
+   function activateTab(activeButton, activeContent){
+    farmersContent.classList.remove('active');
+    partnersContent.classList.remove('active');
+
+    farmersBtn.classList.remove('active');
+    partnersBtn.classList.remove('active');
+
+    activeButton.classList.add('active');
+    activeContent.classList.add('active');
+   }
+
+   farmersBtn.addEventListener('click', () => {
+    activateTab(farmersBtn, farmersContent);
+    });
+    partnersBtn.addEventListener('click', () => {
+      activateTab(partnersBtn,partnersContent);
+    })
+   
+   document.addEventListener('DOMContentLoaded', () => {
+    if(farmersBtn.classList.contains('active')){
+      farmersContent.classList.add('active');
+    } else if(partnersBtn.classList.contains ('active')){
+      partnersContent.classList.add('active');
+    }
+   })
