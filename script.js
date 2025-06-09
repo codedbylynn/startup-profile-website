@@ -45,3 +45,18 @@ window.addEventListener('load',() => {
   featuresCarousel.scrollLeft = 0;
   updateActiveDot()
 });
+
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question =>{
+    question.addEventListener('click',()=>{
+      question.classList.toggle('active');
+      const answer = question.nextElementSibling;
+      answer.classList.toggle('active')
+
+      if (answer.classList.contains('active')){
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else{
+        answer.style.maxHeight = "0";
+      }
+    })
+  })

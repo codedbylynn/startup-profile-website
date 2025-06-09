@@ -1080,7 +1080,7 @@ blockquote{
   margin-left: 15px;
   transition: transform 0.3s ease;
 }
-.faq-question.active.faq-icon
+.faq-question.active .faq-icon
 {
   transform: rotate(180deg);
 }
