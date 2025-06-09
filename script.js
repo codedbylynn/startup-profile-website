@@ -91,3 +91,23 @@ window.addEventListener('load',() => {
       partnersContent.classList.add('active');
     }
    })
+
+   document.addEventListener('DOMContentLoaded', () => {
+    const visitorCountElement = document.getElementById('visitor-count');
+
+    if(visitorCountElement){
+      let visitCount = localStorage.getItem('agroConnectVisitCount');
+
+      if(visitCount === null){
+          visitCount = 0;
+      } else {
+        visitCount = parseInt(visitCount);
+      }
+
+      visitCount++;
+
+      localStorage.setItem('agroConnectVisitCount', visitCount);
+
+      visitCountElement.textContent = visitCount;
+      }
+    })
